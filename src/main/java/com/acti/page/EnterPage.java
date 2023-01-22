@@ -22,7 +22,8 @@ public class EnterPage extends DriverScript {
 	
 	@FindBy(xpath = "//a[@class='userProfileLink username ']")WebElement userprofilelink;
 	@FindBy(id = "logoutLink")WebElement logoutlink;
-	//**************	page initialisation *********************//	
+	@FindBy(xpath="//div[@id='container_tasks']")WebElement tasksbutton;
+	//**************	page initialization *********************//	
 	
 	public EnterPage() throws IOException{
 	PageFactory.initElements(driver,this);
@@ -35,6 +36,10 @@ public class EnterPage extends DriverScript {
 	}
 	public void logout() {
 		logoutlink.click();
+	}
+	
+	public void task() {
+		tasksbutton.click();
 	}
 	
 	
