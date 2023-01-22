@@ -15,7 +15,7 @@ import com.acti.base.DriverScript;
 
 public class LoginPage extends DriverScript {
 
-	
+	//**************	page elements *********************//
 	
 
 	@FindBy(id="username")WebElement textboxUsername;
@@ -24,12 +24,13 @@ public class LoginPage extends DriverScript {
 	@FindBy(xpath="//div[text()='Login ']")WebElement loginclick;
 	@FindBy(xpath="//div[@class='atLogoImg']")WebElement displaylogo;
 	
-
+	//**************	page initialization *********************//	
 	
 public LoginPage() throws Exception{
 	PageFactory.initElements(driver,this);
 	
 }
+//**************	page methods *********************//
 public void enterusername(String username) {
 	textboxUsername.sendKeys(username);
 	
